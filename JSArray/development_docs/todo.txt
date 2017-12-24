@@ -1,0 +1,6 @@
+THINGS TO IMPLEMENT AND FIX
+
+- Revise application fonts
+- Add element number next  to entered element..... if possible.
+- Add array name input
+- Add array index changer.

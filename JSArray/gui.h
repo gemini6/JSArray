@@ -680,6 +680,7 @@ L"Symbol",L"Undefined",L"Null"
 
         System::Void onElementInputTextChanged(System::Object^  sender,System::EventArgs^  e) 
         {
+            //Remove line in production version.
             Console::WriteLine(this->array_element_input->Text->Length);
  
             if(this->array_element_input->Text ==  this->ARRAY_ELEMENT_INPUT_HINT)

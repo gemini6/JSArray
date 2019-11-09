@@ -130,5 +130,6 @@
   <ItemGroup>
     <Text Include="development_docs\ideas.txt" />
     <Text Include="development_docs\todo.txt" />
+    <Text Include="TO_ADD.txt" />
   </ItemGroup>
 </Project>

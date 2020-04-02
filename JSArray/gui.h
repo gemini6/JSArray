@@ -48,19 +48,12 @@ namespace JSArray {
         System::Windows::Forms::ListViewItem^ new_list_view_element;
         System::Windows::Forms::Label^  element_type_lbl;
         System::Windows::Forms::ComboBox^  element_type_comboBox;
-        System::Windows::Forms::Button^  facebook_btn;
-        System::Windows::Forms::Button^  twitter_btn;
-        System::Windows::Forms::Button^  google_plus_btn;
-        System::Windows::Forms::Button^  instagram_btn;
-        System::Windows::Forms::Button^  linkedin_btn;
-        System::Windows::Forms::Button^  blogger_btn;
-        System::Windows::Forms::Button^  youtube_btn;
+
         System::Windows::Forms::CheckBox^  wrap_in_single_quotes_checkbox;
         System::Windows::Forms::Button^  clear_created_array_output_btn;
         System::Windows::Forms::Button^  clear_all_btn;
         System::Windows::Forms::CheckBox^  make_array_object_checkbox;
 
-        
         System::String^ open_quote = "'";
         System::String^ end_quote = "'"; 
         System::String^ open_double_quote = L"\"";
@@ -112,13 +105,6 @@ namespace JSArray {
             this->add_array_element_btn = (gcnew System::Windows::Forms::Button());
             this->element_type_lbl = (gcnew System::Windows::Forms::Label());
             this->element_type_comboBox = (gcnew System::Windows::Forms::ComboBox());
-            this->facebook_btn = (gcnew System::Windows::Forms::Button());
-            this->twitter_btn = (gcnew System::Windows::Forms::Button());
-            this->google_plus_btn = (gcnew System::Windows::Forms::Button());
-            this->instagram_btn = (gcnew System::Windows::Forms::Button());
-            this->linkedin_btn = (gcnew System::Windows::Forms::Button());
-            this->blogger_btn = (gcnew System::Windows::Forms::Button());
-            this->youtube_btn = (gcnew System::Windows::Forms::Button());
             this->wrap_in_single_quotes_checkbox = (gcnew System::Windows::Forms::CheckBox());
             this->clear_created_array_output_btn = (gcnew System::Windows::Forms::Button());
             this->clear_all_btn = (gcnew System::Windows::Forms::Button());
@@ -263,90 +249,9 @@ L"Symbol",L"Undefined",L"Null"
             this->element_type_comboBox->TabIndex = 9;
             this->element_type_comboBox->Text = L"String";
             this->element_type_comboBox->SelectedIndexChanged += gcnew System::EventHandler(this,&gui::onElementTypeIndexChanged);
-            // 
-            // facebook_btn
-            // 
-            this->facebook_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"facebook_btn.BackgroundImage")));
-            this->facebook_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->facebook_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->facebook_btn->Location = System::Drawing::Point(420,317);
-            this->facebook_btn->Name = L"facebook_btn";
-            this->facebook_btn->Size = System::Drawing::Size(26,24);
-            this->facebook_btn->TabIndex = 10;
-            this->facebook_btn->UseVisualStyleBackColor = true;
-            this->facebook_btn->Click += gcnew System::EventHandler(this,&gui::onFacebookBtnClick);
-            // 
-            // twitter_btn
-            // 
-            this->twitter_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"twitter_btn.BackgroundImage")));
-            this->twitter_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->twitter_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->twitter_btn->Location = System::Drawing::Point(580,317);
-            this->twitter_btn->Name = L"twitter_btn";
-            this->twitter_btn->Size = System::Drawing::Size(26,24);
-            this->twitter_btn->TabIndex = 11;
-            this->twitter_btn->UseVisualStyleBackColor = true;
-            this->twitter_btn->Click += gcnew System::EventHandler(this,&gui::onTwitterBtnClick);
-            // 
-            // google_plus_btn
-            // 
-            this->google_plus_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"google_plus_btn.BackgroundImage")));
-            this->google_plus_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->google_plus_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->google_plus_btn->Location = System::Drawing::Point(452,317);
-            this->google_plus_btn->Name = L"google_plus_btn";
-            this->google_plus_btn->Size = System::Drawing::Size(26,24);
-            this->google_plus_btn->TabIndex = 12;
-            this->google_plus_btn->UseVisualStyleBackColor = true;
-            this->google_plus_btn->Click += gcnew System::EventHandler(this,&gui::onGooglePlusBtnClick);
-            // 
-            // instagram_btn
-            // 
-            this->instagram_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"instagram_btn.BackgroundImage")));
-            this->instagram_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->instagram_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->instagram_btn->Location = System::Drawing::Point(548,317);
-            this->instagram_btn->Name = L"instagram_btn";
-            this->instagram_btn->Size = System::Drawing::Size(26,24);
-            this->instagram_btn->TabIndex = 13;
-            this->instagram_btn->UseVisualStyleBackColor = true;
-            this->instagram_btn->Click += gcnew System::EventHandler(this,&gui::onInstagramBtnClick);
-            // 
-            // linkedin_btn
-            // 
-            this->linkedin_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"linkedin_btn.BackgroundImage")));
-            this->linkedin_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->linkedin_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->linkedin_btn->Location = System::Drawing::Point(484,317);
-            this->linkedin_btn->Name = L"linkedin_btn";
-            this->linkedin_btn->Size = System::Drawing::Size(26,24);
-            this->linkedin_btn->TabIndex = 14;
-            this->linkedin_btn->UseVisualStyleBackColor = true;
-            this->linkedin_btn->Click += gcnew System::EventHandler(this,&gui::onLinkedInBtnClick);
-            // 
-            // blogger_btn
-            // 
-            this->blogger_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"blogger_btn.BackgroundImage")));
-            this->blogger_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->blogger_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->blogger_btn->Location = System::Drawing::Point(612,317);
-            this->blogger_btn->Name = L"blogger_btn";
-            this->blogger_btn->Size = System::Drawing::Size(26,24);
-            this->blogger_btn->TabIndex = 15;
-            this->blogger_btn->UseVisualStyleBackColor = true;
-            this->blogger_btn->Click += gcnew System::EventHandler(this,&gui::onBloggerBtnClick);
-            // 
-            // youtube_btn
-            // 
-            this->youtube_btn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"youtube_btn.BackgroundImage")));
-            this->youtube_btn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-            this->youtube_btn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->youtube_btn->Location = System::Drawing::Point(516,317);
-            this->youtube_btn->Name = L"youtube_btn";
-            this->youtube_btn->Size = System::Drawing::Size(26,24);
-            this->youtube_btn->TabIndex = 16;
-            this->youtube_btn->UseVisualStyleBackColor = true;
-            this->youtube_btn->Click += gcnew System::EventHandler(this,&gui::onYoutubeBtnClick);
+            // ###########
+            this->element_type_comboBox->TextChanged += gcnew System::EventHandler(this, &gui::onElementTypeTextChanged);
+             // ###########
             // 
             // wrap_in_single_quotes_checkbox
             // 
@@ -421,13 +326,6 @@ L"Symbol",L"Undefined",L"Null"
             this->Controls->Add(this->clear_all_btn);
             this->Controls->Add(this->clear_created_array_output_btn);
             this->Controls->Add(this->wrap_in_single_quotes_checkbox);
-            this->Controls->Add(this->youtube_btn);
-            this->Controls->Add(this->blogger_btn);
-            this->Controls->Add(this->linkedin_btn);
-            this->Controls->Add(this->instagram_btn);
-            this->Controls->Add(this->google_plus_btn);
-            this->Controls->Add(this->twitter_btn);
-            this->Controls->Add(this->facebook_btn);
             this->Controls->Add(this->element_type_comboBox);
             this->Controls->Add(this->element_type_lbl);
             this->Controls->Add(this->add_array_element_btn);
@@ -643,41 +541,6 @@ L"Symbol",L"Undefined",L"Null"
 
         }
 
-        System::Void onFacebookBtnClick(System::Object^  sender,System::EventArgs^  e)
-        {
-            System::Windows::Forms::MessageBox::Show("Facebook");
-        }
-
-        System::Void onGooglePlusBtnClick(System::Object^  sender,System::EventArgs^  e) 
-        {
-            System::Windows::Forms::MessageBox::Show("Google+");
-        }
-
-        System::Void onLinkedInBtnClick(System::Object^  sender,System::EventArgs^  e) 
-        {
-            System::Windows::Forms::MessageBox::Show("LinkedIn");
-        }
-
-        System::Void onYoutubeBtnClick(System::Object^  sender,System::EventArgs^  e) 
-        {
-            System::Windows::Forms::MessageBox::Show("Youtube");
-        }
-
-        System::Void onInstagramBtnClick(System::Object^  sender,System::EventArgs^  e) 
-        {
-            System::Windows::Forms::MessageBox::Show("Instagram");
-        }
-
-        System::Void onTwitterBtnClick(System::Object^  sender,System::EventArgs^  e) 
-        {
-            System::Windows::Forms::MessageBox::Show("Twitter");
-        }
-
-        System::Void onBloggerBtnClick(System::Object^  sender,System::EventArgs^  e) 
-        {
-            System::Windows::Forms::MessageBox::Show("Blogger");
-        }
-
         System::Void onElementInputTextChanged(System::Object^  sender,System::EventArgs^  e) 
         {
             //Remove line in production version.
@@ -763,7 +626,7 @@ L"Symbol",L"Undefined",L"Null"
             }
         }
 
-        System::Void onUseArrayConstructorCheckedChanged(System::Object^  sender,System::EventArgs^  e) 
+        System::Void onUseArrayConstructorCheckedChanged(System::Object^  sender, System::EventArgs^  e) 
         {
             if(this->make_array_object_checkbox->Checked == true)
             {
@@ -842,13 +705,16 @@ L"Symbol",L"Undefined",L"Null"
             }
         }
 
-        System::Void array_elements_listview_SelectedIndexChanged(System::Object^  sender,System::EventArgs^  e) 
+        System::Void array_elements_listview_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) 
         {
    
         }
 
-        System::Void onElementTypeIndexChanged(System::Object^  sender,System::EventArgs^  e) 
+         // ###########
+        System::Void onElementTypeIndexChanged(System::Object^  sender, System::EventArgs^  e) 
         {
+            // TODO: Make it so that the entered array element has to match the selected element type. 
+            // I have to do this for the rest of the element types.
             if(this->element_type_comboBox->Text == "String")
             {
                 this->use_quotation_marks = true;
@@ -858,7 +724,14 @@ L"Symbol",L"Undefined",L"Null"
                 this->use_quotation_marks = false;
             }
         }
+         // ###########
 
-       
-    };
+        // ###########
+        System::Void onElementTypeTextChanged(System::Object^  sender, System::EventArgs^  e) {
+            // The combobox doesn't have a ReadOnly property so I have to try to make it so 
+            // the value can only be chosen from the listed values. The user should not be allowed to 
+            // write a value. 
+        }
+        // ###########
+};
 }
